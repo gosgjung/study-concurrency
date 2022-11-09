@@ -1,2 +1,2 @@
-create database product_stock;
-use product_stock;
+create database counter_example;
+use counter_example;
