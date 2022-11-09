@@ -1,13 +1,13 @@
-package io.study.cuncurrency.product_stock;
+package io.study.cuncurrency.counter;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class ProductStockApplication {
+public class CounterApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(ProductStockApplication.class, args);
+		SpringApplication.run(CounterApplication.class, args);
 	}
 
 }

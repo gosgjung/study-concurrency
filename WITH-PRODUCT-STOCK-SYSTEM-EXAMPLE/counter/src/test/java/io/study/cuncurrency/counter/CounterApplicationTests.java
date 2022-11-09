@@ -1,10 +1,10 @@
-package io.study.cuncurrency.product_stock;
+package io.study.cuncurrency.counter;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class ProductStockApplicationTests {
+class CounterApplicationTests {
 
 	@Test
 	void contextLoads() {
