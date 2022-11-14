@@ -12,6 +12,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
+import java.util.concurrent.TimeUnit;
 
 @SpringBootTest
 public class CounterServiceTest {
@@ -62,7 +63,7 @@ public class CounterServiceTest {
             });
         }
 
-        latch.await();
+        latch.await(5L, TimeUnit.SECONDS);
 
         Counter counter = counterRepository.findById(1L).orElseThrow();
         Assertions.assertThat(counter.getCnt()).isEqualTo(0L);
