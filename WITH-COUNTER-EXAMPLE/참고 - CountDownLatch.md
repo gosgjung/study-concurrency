@@ -57,6 +57,21 @@ public class CountDownLatchTest {
 
 <br>
 
+출력결과
+
+```plain
+(before) [메인 스레드] 스레드 id = 1
+(after) [메인 스레드] 스레드 id = 1
+count down, thread id = 26
+count down, thread id = 25
+count down, thread id = 27
+(finished) [메인 스레드] 스레드 id = 1
+
+Process finished with exit code 0
+```
+
+<br>
+
 ## 2) ExecutorService
 
 위의 예제는 단순히 스레드를 생성해서 기다리는 예제인데, 실제로는 ExecutorService 로 ThreadPool을 만들어서 스레드를 재활용하면서 원하는 카운트가 소진될때까지 기다리는 코드를 작성하기도 한다.<br>
