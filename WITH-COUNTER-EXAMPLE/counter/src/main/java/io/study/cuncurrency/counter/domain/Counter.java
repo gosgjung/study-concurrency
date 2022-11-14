@@ -25,7 +25,7 @@ public class Counter {
     }
 
     public void decrease(Long diff){
-        if(this.cnt < 0){
+        if(this.cnt - diff< 0){
             throw new RuntimeException("카운터를 이미 넘어섰습니다... ");
         }
 

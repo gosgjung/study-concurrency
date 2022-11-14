@@ -8,6 +8,8 @@ spring:
     url: jdbc:mysql://127.0.0.1:33306/counter_example
     username: root
     password: 1111
+    hikari:
+      maximum-pool-size: 15
 
 logging:
   level:
