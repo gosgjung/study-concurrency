@@ -1,5 +1,27 @@
 version: '3'
 services:
+  redis:
+    image: redis:7.0.2-alpine
+    command: redis-server --port 6379
+    #    container_name: redis-normal
+    hostname: redis-normal
+    labels:
+      - "name=redis"
+      - "mode=standalone"
+    ports:
+      - 36379:6379
+    links:
+      - redis-commander
+  redis-commander:
+    image: rediscommander/redis-commander:latest
+    #    container_name: redis-commander
+    hostname: redis-commander
+    restart: always
+    environment:
+      - REDIS_HOSTS=redis-normal
+    #      - REDIS_HOST=redis-normal:redis:16379
+    ports:
+      - 38081:8081
   mysql-for-test:
     image: mysql:5.7.39-debian
     restart: always
@@ -21,3 +43,9 @@ services:
       - --collation-server=utf8mb4_unicode_ci
     volumes:
       - ./init/:/docker-entrypoint-initdb.d/
+  adminer-temp:
+    image: adminer
+    restart: always
+#    container_name: adminer-temp
+    ports:
+      - 38080:8080
