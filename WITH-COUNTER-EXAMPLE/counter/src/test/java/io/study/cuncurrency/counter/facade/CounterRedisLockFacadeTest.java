@@ -4,7 +4,6 @@ import io.study.cuncurrency.counter.domain.Counter;
 import io.study.cuncurrency.counter.repository.CounterRepository;
 import io.study.cuncurrency.counter.repository.RedisLockRepository;
 import io.study.cuncurrency.counter.service.CounterService;
-import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
